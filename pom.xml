@@ -84,12 +84,17 @@
 
 	</dependencies>
 <distributionManagement>
-  <snapshotRepository>
-    <id>snapshots</id>
-    <url>http://34.229.251.177:8081/nexus/content/repositories/snapshots</url>
-  </snapshotRepository>
-</distributionManagement>
-	<build>
+    <repository>
+        <id>central</id>
+        <name>ip-172-31-10-200.us-east-2.compute.internal-releases</name>
+        <url>http://3.133.148.74:8081/artifactory/snapshot-maven</url>
+    </repository>
+    <snapshotRepository>
+        <id>nexus</id>
+        <name>ip-172-31-10-200.us-east-2.compute.internal-snapshots</name>
+        <url>http://3.133.148.74:8081/artifactory/snapshot-maven</url>
+    </snapshotRepository>
+</distributionManagement>	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
